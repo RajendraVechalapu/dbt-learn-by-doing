@@ -1,0 +1,34 @@
+
+version: 2
+
+models:
+  - name: my_first_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+
+  - name: my_second_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+          
+  - name: filtered_faq_skill_keywords
+    description: "Filtered list of skill keywords with non-empty explanations"
+    columns:
+      - name: keyword
+        description: "The skill keyword"
+        tests:
+          - not_null  # Ensure no NULL values in keyword
+
+      - name: explanation
+        description: "The explanation for the skill keyword"
+        tests:
+          - not_null  # Ensure no NULL values in explanation

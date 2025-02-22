@@ -1,0 +1,29 @@
+# Name your project! The project name should contain only lowercase letters and underscores.
+name: 'dbtdemo1'
+version: '1.0.0'
+
+# This setting configures which "profile" dbt uses for this project.
+profile: 'dbtdemo1'
+
+# These configurations specify where dbt should look for different types of files.
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+# Directories to be removed by `dbt clean`
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+# Configuring models
+# Full documentation: https://docs.getdbt.com/docs/configuring-models
+models:
+  dbtdemo1:
+    # Apply these settings to all models in the 'models' folder
+    +materialized: table  # Change to 'view' if you want dbt to create views instead of tables
+    staging:
+      # +schema: staging  # Creates a 'staging' schema in PostgreSQL
+      +materialized: view

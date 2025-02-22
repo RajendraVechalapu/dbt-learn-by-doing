@@ -1,0 +1,101 @@
+[0m10:01:30.845472 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DFFEE16490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DFFEE0B2D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DFFEE0A6D0>]}
+
+
+============================== 10:01:30.845472 | 48af0adb-b59b-4244-8c89-78b132d3d437 ==============================
+[0m10:01:30.845472 [info ] [MainThread]: Running with dbt=1.9.2
+[0m10:01:30.845472 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\rajen\\.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt init dbtdemo1', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m10:01:30.868039 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse logging event dictionary. Failed to parse dir field: expected string or bytes-like object, got 'WindowsPath'.. Dictionary: {'dir': WindowsPath('C:/Users/rajen/.dbt')}
+[0m10:01:30.869161 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m10:01:30.872317 [debug] [MainThread]: Starter project path: D:\Rajendra-Tech\GitHubRepos\dbt-learn-by-doing\dbtenv\Lib\site-packages\dbt\include\starter_project
+[0m10:01:31.039621 [info ] [MainThread]: 
+Your new dbt project "dbtdemo1" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m10:01:31.040621 [info ] [MainThread]: Setting up your profile.
+[0m10:03:13.947570 [error] [MainThread]: Encountered an error:
+
+[0m10:03:13.954796 [error] [MainThread]: Traceback (most recent call last):
+  File "D:\Rajendra-Tech\GitHubRepos\dbt-learn-by-doing\dbtenv\Lib\site-packages\dbt\cli\requires.py", line 153, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Rajendra-Tech\GitHubRepos\dbt-learn-by-doing\dbtenv\Lib\site-packages\dbt\cli\requires.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Rajendra-Tech\GitHubRepos\dbt-learn-by-doing\dbtenv\Lib\site-packages\dbt\cli\main.py", line 477, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "D:\Rajendra-Tech\GitHubRepos\dbt-learn-by-doing\dbtenv\Lib\site-packages\dbt\task\init.py", line 346, in run
+    self.setup_profile(profile_name)
+  File "D:\Rajendra-Tech\GitHubRepos\dbt-learn-by-doing\dbtenv\Lib\site-packages\dbt\task\init.py", line 262, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "D:\Rajendra-Tech\GitHubRepos\dbt-learn-by-doing\dbtenv\Lib\site-packages\dbt\task\init.py", line 179, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "D:\Rajendra-Tech\GitHubRepos\dbt-learn-by-doing\dbtenv\Lib\site-packages\dbt\task\init.py", line 163, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Rajendra-Tech\GitHubRepos\dbt-learn-by-doing\dbtenv\Lib\site-packages\dbt\task\init.py", line 129, in generate_target_from_input
+    target[key] = click.prompt(
+                  ^^^^^^^^^^^^^
+  File "D:\Rajendra-Tech\GitHubRepos\dbt-learn-by-doing\dbtenv\Lib\site-packages\click\termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+            ^^^^^^^^^^^^^^^^^^^
+  File "D:\Rajendra-Tech\GitHubRepos\dbt-learn-by-doing\dbtenv\Lib\site-packages\click\termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m10:03:13.968330 [debug] [MainThread]: Command `dbt init` failed at 10:03:13.968330 after 103.19 seconds
+[0m10:03:13.970346 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DFFEE14150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DFFEDB3510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DFFEAB9150>]}
+[0m10:03:13.972250 [debug] [MainThread]: Flushing usage events
+[0m10:03:14.863709 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:06:07.770652 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000212E30F4D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000212E30F6350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000212E30F5CD0>]}
+
+
+============================== 10:06:07.784025 | 5fef6e18-1242-43ae-8a9e-fbac645a21ee ==============================
+[0m10:06:07.784025 [info ] [MainThread]: Running with dbt=1.9.2
+[0m10:06:07.784025 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'profiles_dir': 'C:\\Users\\rajen\\.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt init dbtdemo1', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m10:06:07.805311 [info ] [MainThread]: A project called dbtdemo1 already exists here.
+[0m10:06:07.805311 [debug] [MainThread]: Command `dbt init` succeeded at 10:06:07.805311 after 0.11 seconds
+[0m10:06:07.805311 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000212E3093590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000212E2EBD1D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000212DCAEB6D0>]}
+[0m10:06:07.805311 [debug] [MainThread]: Flushing usage events
+[0m10:06:08.668994 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:06:53.367275 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D91DC84D10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D91DC7A590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D91DC86610>]}
+
+
+============================== 10:06:53.375764 | 5df3c37c-0d7f-47b7-babf-984f3b6a4b35 ==============================
+[0m10:06:53.375764 [info ] [MainThread]: Running with dbt=1.9.2
+[0m10:06:53.375764 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': 'C:\\Users\\rajen\\.dbt', 'log_path': 'logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt init dbtdemo1', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m10:06:53.396910 [debug] [MainThread]: Starter project path: D:\Rajendra-Tech\GitHubRepos\dbt-learn-by-doing\dbtenv\Lib\site-packages\dbt\include\starter_project
+[0m10:06:53.494810 [info ] [MainThread]: 
+Your new dbt project "dbtdemo1" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m10:06:53.494810 [info ] [MainThread]: Setting up your profile.
+[0m10:08:42.624190 [info ] [MainThread]: Profile dbtdemo1 written to C:\Users\rajen\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m10:08:42.627953 [debug] [MainThread]: Command `dbt init` succeeded at 10:08:42.624190 after 109.33 seconds
+[0m10:08:42.629086 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D91D9561D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D91DA4D1D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D9176FB6D0>]}
+[0m10:08:42.630457 [debug] [MainThread]: Flushing usage events
+[0m10:08:43.509225 [debug] [MainThread]: An error was encountered while trying to flush usage events

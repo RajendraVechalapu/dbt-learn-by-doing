@@ -1,5 +1,5 @@
-python -m venv dbtenv
-.\dbtenv\Scripts\activate
+python -m venv venv
+.\venv\Scripts\activate
 python.exe -m pip install --upgrade pip
 
 /*
@@ -33,7 +33,7 @@ pip install --default-timeout=100 -r requirements.txt
 
 
 Delete the existing virtual environment (if applicable):
-    Remove-Item -Recurse -Force rajenv
+    Remove-Item -Recurse -Force venv
 
 --Uninstalls
 pip list

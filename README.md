@@ -12,13 +12,19 @@ Install dbt Core with the adapter for your database (e.g., Postgres, Snowflake, 
 Verify Installation:
 dbt --version
 
-Now, run init:
-    dbt init dbtdemo1
-
-*/
 
 --dbt connection profile
 C:\Users\rajen\.dbt\profile.yml
+
+Now, run init:
+    dbt init dbtdemo1
+
+
+
+*/
+
+
+/*
 
 pip freeze > requirements.txt
 #ensure remove install from requirements.txt after freeze command
@@ -38,3 +44,6 @@ Delete the existing virtual environment (if applicable):
 --Uninstalls
 pip list
 pip freeze > unins ; pip uninstall -y -r unins ; del unins
+
+
+*/

@@ -1,0 +1,95 @@
+
+🚀 DBT CLI Practice Guide – Learn by Doing
+
+Use this complete step-by-step guide to practise and understand `dbt` CLI commands with your local project (e.g., `dbtdemo1`).
+
+────────────────────────────────────────────
+#Ensure you are on Project Root Directory if not dbtdemo1
+PS D:\Rajendra-Tech\GitHubRepos\DBT-Learn-by-Doing> cd .\dbtdemo1\
+# DB Connection Profile usually can be locate at C:\Users\rajen\.dbt\profiles.yml
+
+1. ✅ Install dbt Core and Postgres Adapter
+
+    pip install dbt-core dbt-postgres
+
+2. 🧹 (Optional) Uninstall dbt Cloud CLI
+
+    pip uninstall dbt-cloud-cli
+
+3. 🔍 Verify dbt Installation
+
+    dbt --version
+
+4. 🛠️ Initialize a New dbt Project
+
+    dbt init dbtdemo1
+
+5. 🔗 Configure dbt Profile (Connection Settings)
+
+Edit this file:
+    C:\Users\<your-username>\.dbt\profiles.yml
+
+Example content:
+    dbtdemo1:
+      outputs:
+        dev:
+          type: postgres
+          host: localhost
+          user: your_user
+          password: your_password
+          port: 5432
+          dbname: your_db
+          schema: public
+      target: dev
+
+6. 📦 Install Python Dependencies (if not done yet)
+
+    pip install -r requirements.txt
+
+7. 🚀 Run All dbt Models
+
+    dbt run
+
+8. ✅ Run Tests on Models
+
+    dbt test
+
+9. 📄 Generate Documentation Site
+
+    dbt docs generate
+
+10. 🌐 Serve Documentation Locally
+
+    dbt docs serve
+
+11. 🎯 Run a Specific Model by Name
+
+    dbt run --select my_first_dbt_model
+
+12. 📋 List All Models in the Project
+
+    dbt ls --resource-type model --output name
+
+13. 🧽 Clean Up Compiled Artifacts and Target Folder
+
+    dbt clean
+
+14. 📦 Install dbt Packages from packages.yml
+
+    dbt deps
+
+15. 📌 Freeze All Python Dependencies
+
+    pip freeze > requirements.txt
+
+────────────────────────────────────────────
+
+✅ You’re now ready to practice dbt end-to-end:
+- Project setup
+- Connection config
+- Model building
+- Testing
+- Docs generation
+- Deployment verification
+
+Happy Building!

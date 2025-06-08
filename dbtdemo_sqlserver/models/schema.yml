@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: test_selected_skills
+    description: >
+      Combines null/blank checks and a summary of distinct modules and topics per skill
+      from the [voc].[kb].[SelectedSkills] table.
+    columns:
+      - name: Skill
+        description: The name of the skill
+        tests:
+          - not_null
+          - unique:  # Optional: remove this if multiple rows can have same skill
+              config:
+                where: "Module is null or Topic is null"
+
+      - name: Module
+        description: Module name (or count if from summary rows)
+
+      - name: Topic
+        description: Topic name (or count if from summary rows)

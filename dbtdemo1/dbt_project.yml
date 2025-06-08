@@ -3,7 +3,7 @@ name: 'dbtdemo1'
 version: '1.0.0'
 
 # This setting configures which "profile" dbt uses for this project.
-profile: 'dbtdemo1'
+profile: 'dbtdemo_postgres'
 
 # These configurations specify where dbt should look for different types of files.
 model-paths: ["models"]

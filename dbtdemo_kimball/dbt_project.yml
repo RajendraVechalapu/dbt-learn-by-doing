@@ -1,0 +1,13 @@
+name: dbtdemo_kimball
+version: '1.0'
+config-version: 2
+
+profile: dbtdemo_kimball_stg
+
+model-paths: ["models"]
+
+models:
+  dbtdemo_kimball:
+    staging:
+      +materialized: table
+      

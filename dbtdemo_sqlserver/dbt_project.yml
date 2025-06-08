@@ -1,0 +1,21 @@
+name: 'dbtdemo_sqlserver'
+version: '1.0.0'
+
+profile: 'dbtdemo_sqlserver'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  dbtdemo_sqlserver:
+    +materialized: table
+    +schema_suffix: ""
+    +schema_override: true

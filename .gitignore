@@ -1,1 +1,3 @@
 venv/
+logs/*
+dbtdemo_sqlserver/tests/*

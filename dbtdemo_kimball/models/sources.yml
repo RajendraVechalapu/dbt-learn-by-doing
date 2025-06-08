@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: raw
+    database: source_SQLDatabase
+    schema: dbo     # ✅ real schema in SQL Server
+    tables:
+      - name: account

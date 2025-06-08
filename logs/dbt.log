@@ -114,3 +114,146 @@ Runtime Error
 [0m08:20:43.533495 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000250DB5ACC10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000250DB5AD1D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000250DB5AD310>]}
 [0m08:20:43.535468 [debug] [MainThread]: Flushing usage events
 [0m08:20:44.626482 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:37:01.281887 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BA75CC7090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BA75CC7250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BA75CC6E50>]}
+
+
+============================== 18:37:01.291501 | 193f04f3-5313-4440-b847-3be5f00f0b26 ==============================
+[0m18:37:01.291501 [info ] [MainThread]: Running with dbt=1.9.2
+[0m18:37:01.291501 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'profiles_dir': 'C:\\Users\\rajen\\.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt init dbtdemo_sqlserver', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m18:37:01.538193 [debug] [MainThread]: Starter project path: D:\Rajendra-Tech\GitHubRepos\DBT-Learn-by-Doing\venv\Lib\site-packages\dbt\include\starter_project
+[0m18:37:01.648856 [info ] [MainThread]: 
+Your new dbt project "dbtdemo_sqlserver" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m18:37:01.651007 [info ] [MainThread]: Setting up your profile.
+[0m18:37:53.434280 [error] [MainThread]: Encountered an error:
+
+[0m18:37:53.733076 [error] [MainThread]: Traceback (most recent call last):
+  File "D:\Rajendra-Tech\GitHubRepos\DBT-Learn-by-Doing\venv\Lib\site-packages\dbt\cli\requires.py", line 153, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Rajendra-Tech\GitHubRepos\DBT-Learn-by-Doing\venv\Lib\site-packages\dbt\cli\requires.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Rajendra-Tech\GitHubRepos\DBT-Learn-by-Doing\venv\Lib\site-packages\dbt\cli\main.py", line 477, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "D:\Rajendra-Tech\GitHubRepos\DBT-Learn-by-Doing\venv\Lib\site-packages\dbt\task\init.py", line 346, in run
+    self.setup_profile(profile_name)
+  File "D:\Rajendra-Tech\GitHubRepos\DBT-Learn-by-Doing\venv\Lib\site-packages\dbt\task\init.py", line 262, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "D:\Rajendra-Tech\GitHubRepos\DBT-Learn-by-Doing\venv\Lib\site-packages\dbt\task\init.py", line 179, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "D:\Rajendra-Tech\GitHubRepos\DBT-Learn-by-Doing\venv\Lib\site-packages\dbt\task\init.py", line 163, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Rajendra-Tech\GitHubRepos\DBT-Learn-by-Doing\venv\Lib\site-packages\dbt\task\init.py", line 129, in generate_target_from_input
+    target[key] = click.prompt(
+                  ^^^^^^^^^^^^^
+  File "D:\Rajendra-Tech\GitHubRepos\DBT-Learn-by-Doing\venv\Lib\site-packages\click\termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+            ^^^^^^^^^^^^^^^^^^^
+  File "D:\Rajendra-Tech\GitHubRepos\DBT-Learn-by-Doing\venv\Lib\site-packages\click\termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m18:37:53.739383 [debug] [MainThread]: Command `dbt init` failed at 18:37:53.739383 after 52.54 seconds
+[0m18:37:53.739383 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BA75CCCC50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BA75D0FE50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BA75D0F890>]}
+[0m18:37:53.739383 [debug] [MainThread]: Flushing usage events
+[0m18:37:54.718984 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:38:00.408684 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000128C2296710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000128C2296CD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000128C2296850>]}
+
+
+============================== 18:38:00.408684 | fd78d354-b331-4a5b-bdcc-2c0998e2b097 ==============================
+[0m18:38:00.408684 [info ] [MainThread]: Running with dbt=1.9.2
+[0m18:38:00.408684 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\rajen\\.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt init dbtdemo_sqlserver', 'send_anonymous_usage_stats': 'True'}
+[0m18:38:00.430883 [info ] [MainThread]: A project called dbtdemo_sqlserver already exists here.
+[0m18:38:00.432351 [debug] [MainThread]: Command `dbt init` succeeded at 18:38:00.432351 after 0.09 seconds
+[0m18:38:00.433903 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000128C229C910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000128BBD0FCD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000128BBD0F150>]}
+[0m18:38:00.434204 [debug] [MainThread]: Flushing usage events
+[0m18:38:01.287061 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:38:11.500244 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001830E2171D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001830E118110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001830DF37B90>]}
+
+
+============================== 18:38:11.503549 | d771a16a-a632-4d70-8ac5-1cd60ab8b83d ==============================
+[0m18:38:11.503549 [info ] [MainThread]: Running with dbt=1.9.2
+[0m18:38:11.503549 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\rajen\\.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt init dbtdemo_sqlserver', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m18:38:11.528774 [debug] [MainThread]: Starter project path: D:\Rajendra-Tech\GitHubRepos\DBT-Learn-by-Doing\venv\Lib\site-packages\dbt\include\starter_project
+[0m18:38:11.549340 [info ] [MainThread]: 
+Your new dbt project "dbtdemo_sqlserver" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m18:38:11.550341 [info ] [MainThread]: Setting up your profile.
+[0m18:41:13.541716 [info ] [MainThread]: Profile dbtdemo_sqlserver written to C:\Users\rajen\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m18:41:13.544711 [debug] [MainThread]: Command `dbt init` succeeded at 18:41:13.544711 after 182.11 seconds
+[0m18:41:13.546186 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018307EE9210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018307C4FD50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018307C4FCD0>]}
+[0m18:41:13.547303 [debug] [MainThread]: Flushing usage events
+[0m18:41:14.473741 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:46:44.047847 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000242113D72D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024211418D50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000242114183D0>]}
+
+
+============================== 18:46:44.055316 | dacb6ad7-95ae-4ab3-be83-015613c87bf3 ==============================
+[0m18:46:44.055316 [info ] [MainThread]: Running with dbt=1.9.2
+[0m18:46:44.055316 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'profiles_dir': 'C:\\Users\\rajen\\.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt test --select test_selected_skills', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m18:46:44.058852 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path D:\Rajendra-Tech\GitHubRepos\DBT-Learn-by-Doing\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m18:46:44.058852 [debug] [MainThread]: Command `dbt test` failed at 18:46:44.058852 after 0.11 seconds
+[0m18:46:44.058852 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000242113DCB90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024211423C90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002420AE3F190>]}
+[0m18:46:44.062676 [debug] [MainThread]: Flushing usage events
+[0m18:46:45.009450 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:21:45.360792 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002160C0C6E90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002160B5DAD10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002160C0F1D50>]}
+
+
+============================== 19:21:45.366507 | 8cc75103-e602-4ee5-9f75-1a2cbc5a4c3e ==============================
+[0m19:21:45.366507 [info ] [MainThread]: Running with dbt=1.9.2
+[0m19:21:45.367507 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\rajen\\.dbt', 'log_path': 'logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt init dbtdemo_kimball', 'send_anonymous_usage_stats': 'True'}
+[0m19:21:45.385711 [debug] [MainThread]: Starter project path: D:\Rajendra-Tech\GitHubRepos\DBT-Learn-by-Doing\venv\Lib\site-packages\dbt\include\starter_project
+[0m19:21:45.397457 [info ] [MainThread]: 
+Your new dbt project "dbtdemo_kimball" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m19:21:45.398791 [info ] [MainThread]: Setting up your profile.
+[0m19:22:07.845230 [info ] [MainThread]: Profile dbtdemo_kimball written to C:\Users\rajen\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m19:22:07.849243 [debug] [MainThread]: Command `dbt init` succeeded at 19:22:07.848172 after 22.56 seconds
+[0m19:22:07.851045 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021605BAFD90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002160BD87390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002160C0C6710>]}
+[0m19:22:07.852751 [debug] [MainThread]: Flushing usage events
+[0m19:22:08.785524 [debug] [MainThread]: An error was encountered while trying to flush usage events
